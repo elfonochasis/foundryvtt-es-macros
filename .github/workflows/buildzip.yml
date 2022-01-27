@@ -51,3 +51,9 @@ jobs:
         with:
           name: my-artifact
           path: ${{ github.workspace }}/builds/macros.zip
+    
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "builds/*.zip"
+          body: "Test"
+          token: ${{ secrets.GITHUB_TOKEN }}
