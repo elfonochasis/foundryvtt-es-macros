@@ -49,4 +49,4 @@ jobs:
           # List of excluded files / directories
           exclusions: '*.git* /*node_modules/* .editorconfig'
           # Tool to use for archiving
-          type: '.zip'
+          type: 'zip'
