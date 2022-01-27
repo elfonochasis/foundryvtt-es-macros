@@ -35,23 +35,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Zip Release
-        # You may pin to the exact commit or the version.
-        # uses: TheDoctor0/zip-release@591e9b128012d3328db6043d0d0266c3ac27f9b5
-        uses: TheDoctor0/zip-release@0.6.1
+      - uses: papeloto/action-zip@v1
         with:
-          # Filename for archive
-          filename: 'macros.zip'
-          # Base path for archive files
-          path: '../macros'
-          # Working directory before zipping
-          directory: './builds'
-          # List of excluded files / directories
-          exclusions: '*.git* /*node_modules/* .editorconfig'
-          # Tool to use for archiving
-          type: 'zip'
+          files: ./macros
+          recursive: true
+          dest: ./builds/macros.zip
           
       - uses: actions/upload-artifact@v1
         with:
           name: my-artifact
-          path: ${{ github.workspace }}/macros.zip
+          path: ${{ github.workspace }}/builds/macros.zip
