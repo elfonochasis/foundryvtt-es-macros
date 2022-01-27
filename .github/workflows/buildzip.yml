@@ -45,7 +45,7 @@ jobs:
           # Base path for archive files
           path: '../builds'
           # Working directory before zipping
-          directory: '/macros'
+          directory: './macros'
           # List of excluded files / directories
           exclusions: '*.git* /*node_modules/* .editorconfig'
           # Tool to use for archiving
