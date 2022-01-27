@@ -50,3 +50,9 @@ jobs:
           exclusions: '*.git* /*node_modules/* .editorconfig'
           # Tool to use for archiving
           type: 'zip'
+      - name: Install zip
+        uses: montudor/action-zip@v1
+
+      - uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r macros.zip ./macros
