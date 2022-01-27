@@ -43,9 +43,9 @@ jobs:
           # Filename for archive
           filename: 'macros.zip'
           # Base path for archive files
-          path: '../builds'
+          path: '../macros'
           # Working directory before zipping
-          directory: './macros'
+          directory: './builds'
           # List of excluded files / directories
           exclusions: '*.git* /*node_modules/* .editorconfig'
           # Tool to use for archiving
